@@ -15,7 +15,7 @@ Predict the final leg delivery handover time (minutes) for food delivery orders.
 - FastAPI service to predict delivery time `predict.py`
 - Dockerfile to containerize the service
 - Dependencies `pyproject.toml`, `uv.lock` 
-- Recording of working prediction application `Delivery Handover Prediction App Recording.mov`
+- Recording of working prediction application is available here: https://www.youtube.com/watch?v=JX8sDpezQfs
 
 **NB:** This repository contains mock data (`mock_handover_data_nonlinear.csv`). The approach was developed based on this mock dataset.
 
