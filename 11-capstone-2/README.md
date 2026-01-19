@@ -17,6 +17,8 @@ Given Airbnb listing data, predict which **price class** a listing belongs to:
 * **Market rate**
 * **High-value**
 
+The idea is to suggest to property owners if their apartment falls under one of the categories to help with better decision-making around pricing. 
+
 ### Solution
 
 * Extensive **feature engineering** (host, amenities, location, time, text length)
@@ -30,6 +32,7 @@ Given Airbnb listing data, predict which **price class** a listing belongs to:
 ## 🔍 Exploratory Data Analysis (EDA)
 
 Exploratory Data Analysis was performed to understand the structure of the data, identify patterns, and guide feature engineering decisions.
+The dataset offered 79 columns, which were closely analysed, transformed and reduced to 33 features (which are still too many to be fair).
 
 ### 📍 Location Features
 
@@ -55,7 +58,7 @@ Exploratory Data Analysis was performed to understand the structure of the data,
 * Longer descriptions were mildly correlated with higher price classes.
 * Sentiment analysis was tested as well but it didn't bring much added value compared to simple length (though was interesting to do)
 
-### ⭐ Reviews & Availability
+### ⭐ Reviews 
 
 * Review scores showed a positive correlation with higher price classes.
 
@@ -65,6 +68,11 @@ Exploratory Data Analysis was performed to understand the structure of the data,
 * Location and amenities are the strongest drivers of price class.
 * Host-related features provide valuable secondary signals.
 * Simple text-derived features can improve predictive power without NLP complexity.
+* Later at the feature importance stage EDA findings were partially confirmed. The most important features were: 
+    * Distance to city centre is the most important indicator
+    * Number of people an apartment can fit
+    * Apartment type
+    * Availability and reviews
 
 ---
 
@@ -97,16 +105,7 @@ Multiple models were evaluated during development to balance performance, interp
 * Allows easy inspection of feature importance
 * Selected as the **final production model**
 
----
-
-## 📈 Final Model Choice
-
-The **Random Forest classifier** was chosen because it:
-
-* Generalized better than linear models
-* Was less sensitive to hyperparameter tuning than XGBoost
-* Provided meaningful feature importance
-* Avoided severe overfitting after tuning depth and sample constraints
+Intersting that feature importance for XGBoost was quite different from Random Forest. It is very likely that high correlation between features makes them interchangeable.
 
 ---
 
