@@ -70,6 +70,11 @@ class PredictionResponse(BaseModel):
 
 app = FastAPI(title="airbnb_price_class_prediction_api")
 
+@app.get("/")
+def health():
+    return {"status": "ok"}
+
+
 # 3. Load model
 
 with open("model.bin", "rb") as f_in:
