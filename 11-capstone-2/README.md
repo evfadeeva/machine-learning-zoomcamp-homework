@@ -28,7 +28,7 @@ The idea is to suggest to property owners if their apartment falls under one of 
 * **Dockerized** for reproducibility and deployment
 * **Live Demo** the model is deployed on Render and can be accessed here:  👉 https://machine-learning-zoomcamp-homework-1.onrender.com/docs
 * You can test the API via the `/docs` endpoint.
-**Video of life use**: https://www.youtube.com/watch?v=txiCrUZdtZI
+* **Video of life use**: https://www.youtube.com/watch?v=txiCrUZdtZI
 
 ---
 
